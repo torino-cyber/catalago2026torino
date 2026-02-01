@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Torino | Catálogo Atacado</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>TORINO • Catálogo Atacado</h1>
+  <p>Venda exclusiva para atacado</p>
+</header>
+
+<!-- CATEGORIAS -->
+<section class="categorias">
+  <button onclick="setCategoria('Feminino')">Feminino</button>
+  <button onclick="setCategoria('Masculino')">Masculino</button>
+  <button onclick="setCategoria('Infantil')">Infantil</button>
+</section>
+
+<!-- ESTAÇÕES -->
+<section class="estacoes">
+  <button onclick="setEstacao('Primavera/Verão')">Primavera / Verão</button>
+  <button onclick="setEstacao('Outono/Inverno')">Outono / Inverno</button>
+</section>
+
+<!-- PRODUTOS -->
+<main id="produtos"></main>
+
+<!-- CARRINHO -->
+<section class="carrinho">
+  <h2>Carrinho</h2>
+  <div id="listaCarrinho"></div>
+  <strong id="total"></strong>
+  <button onclick="abrirCheckout()">Finalizar Pedido</button>
+</section>
+
+<!-- CHECKOUT -->
+<section id="checkout" class="checkout hidden">
+  <h2>Finalizar Pedido</h2>
+  <input id="nome" placeholder="Nome" required>
+  <input id="email" type="email" placeholder="Email" required>
+  <select id="envio">
+    <option value="Transportadora">Transportadora</option>
+    <option value="Correios">Correios</option>
+    <option value="Retirada">Retirada</option>
+  </select>
+  <button onclick="enviarWhats()">Enviar no WhatsApp</button>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
